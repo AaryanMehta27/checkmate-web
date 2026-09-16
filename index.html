@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- viewport-fit=cover lets the app paint under the notch and home indicator,
+     which is what makes an installed web app stop looking like a web page. -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Checkmate</title>
+<meta name="description" content="Split the bill. Crown the king.">
+<meta name="theme-color" content="#0A0A0C">
+<meta name="color-scheme" content="dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="icon.png">
+<!-- iOS ignores the manifest; these are the equivalent. -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Checkmate">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+  html, body { height: 100%; }
+  body {
+    overflow: hidden;
+    margin: 0;
+    background: #0A0A0C;
+    -webkit-font-smoothing: antialiased;
+    /* Stops the page rubber-banding behind the app on iOS. */
+    overscroll-behavior: none;
+  }
+  /* 100dvh, not 100%, so the layout survives mobile browser chrome collapsing
+     on scroll — otherwise a pinned footer drifts off the bottom. */
+  #root { display: flex; flex: 1; height: 100dvh; }
+</style>
+</head>
+<body>
+<noscript>Checkmate needs JavaScript to run.</noscript>
+<div id="root"></div>
+<script src="app/bundle.js" defer></script>
+</body>
+</html>

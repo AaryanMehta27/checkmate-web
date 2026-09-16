@@ -1,0 +1,25 @@
+{
+  "name": "Checkmate",
+  "short_name": "Checkmate",
+  "description": "Split the bill. Crown the king.",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0A0A0C",
+  "theme_color": "#0A0A0C",
+  "start_url": "./",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
